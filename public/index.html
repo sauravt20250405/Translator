@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Translator PRO</title>
+    <!-- Appending a cache-buster query (?v=1) to ensure the browser drops old plain layouts -->
+    <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+    <div class="translator-container">
+        <h2>Sentence Translator PRO</h2>
+        
+        <div class="controls">
+            <!-- Source language selection options are injected dynamically by script.js -->
+            <select id="sourceLang">
+                <option value="autodetect">Auto Detect</option>
+            </select>
+            
+            <span class="arrow">➔</span>
+            
+            <!-- Target language selection options are injected dynamically by script.js -->
+            <select id="targetLang"></select>
+        </div>
+
+        <div class="text-areas">
+            <!-- Input Container with a nested Audio Microphone toggle -->
+            <div class="textarea-wrapper">
+                <textarea id="inputText" placeholder="Type your sentence or click mic to speak..."></textarea>
+                <button id="micBtn" class="icon-btn" title="Speak to Input">🎤</button>
+            </div>
+            
+            <!-- Output Container with a nested Audio Text-to-Speech toggle -->
+            <div class="textarea-wrapper">
+                <textarea id="outputText" placeholder="Translation will appear here..." readonly></textarea>
+                <button id="speakBtn" class="icon-btn" title="Listen to Translation">🔊</button>
+            </div>
+        </div>
+
+        <button id="translateBtn">Translate</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
